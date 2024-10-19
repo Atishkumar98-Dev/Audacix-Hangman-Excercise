@@ -35,14 +35,16 @@ class GuessView(APIView):
 
             correct, status = game.make_guess(guess)
             response = {
-                "word":game.word,
                 "correct": correct,
                 "status": status,
                 "current_state": game.current_state,
                 "incorrect_guesses": game.incorrect_guesses,
                 "max_incorrect_guesses": game.max_incorrect_guesses,
             }
+            if game.status == "Lost":
+                response['word'] = game.word  # Include the correct word in the response
             return Response(response)
+        
         except Game.DoesNotExist:
             return Response({"error": "Game not found"}, status=status.HTTP_404_NOT_FOUND)
 
