@@ -1,0 +1,3 @@
+[submodule "hangman-frontend"]
+	path = hangman-frontend
+	url = https://github.com/Atishkumar98-Dev/Audacix-Hangman-Excercise
