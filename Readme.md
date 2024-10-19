@@ -45,8 +45,8 @@ This is a full-stack web application that powers a Hangman game using a Django R
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/hangman-game.git
-cd hangman-game/backend
+git clone https://github.com/Atishkumar98-Dev/Audacix-Hangman-Excercise
+cd Audacix-Hangman-Excercise/
 ```
 
 ### 2. Create a virtual environment
@@ -106,7 +106,7 @@ The API will be accessible at `http://127.0.0.1:8000/`.
 ### 1. Navigate to the frontend directory
 
 ```bash
-cd ../frontend
+cd ../hangman-frontend
 ```
 
 ### 2. Install frontend dependencies
