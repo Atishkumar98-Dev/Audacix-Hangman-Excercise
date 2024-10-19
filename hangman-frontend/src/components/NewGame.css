@@ -1,61 +1,148 @@
+/* New Game Container */
 .new-game-container {
-    position: relative;  /* Allows positioning of pseudo-elements */
-    text-align: center;
-    padding: 40px;
-    border-radius: 10px;
-    max-width: 400px;   /* Width of the container */
-    margin: 50px auto;  /* Centering the container */
-    color: white;       /* Text color */
-    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background for visibility */
-    z-index: 2;        /* Ensure it's on top of the blurred background */
+  position: relative;
+  text-align: center;
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 50px auto;
+  color: white;
+  background-color: rgba(197, 134, 16, 0.61);
+  z-index: 2;
+  animation: fadeIn 1.5s ease-in-out, pulseShadow 2.5s ease-in-out infinite; /* Fade-in and pulsing shadow */
+  box-shadow: 0 0 15px rgba(197, 134, 16, 0.4); /* Initial shadow */
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  border: 2px solid rgba(235, 199, 98, 0.8); /* Glowing border */
+  animation: fadeIn 1.5s ease-in-out, pulse 3s ease-in-out infinite; /* Fade-in and slow pulse */
+}
+
+/* Hover effect for scaling and glowing */
+.new-game-container:hover {
+  transform: scale(1.05); /* Slightly scale up on hover */
+  box-shadow: 0 0 25px rgba(235, 199, 98, 0.8); /* Increase glow on hover */
+  border-color: rgba(235, 199, 98, 1); /* Strengthen border glow on hover */
+}
+/* Animated Background */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/public/images/hangman.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  z-index: 1;
+  border-radius: 10px;
+  /* animation: zoomInBackground 20s infinite; Slow zoom-in animation */
+}
+
+/* Title Animations */
+.game-title {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: wheat;
+  position: relative;
+  animation: floatText 3s ease-in-out infinite; /* Floating text effect */
+}
+
+/* Start Game Button with Bounce Effect */
+.start-game-btn {
+  background-color: rgba(235, 199, 98, 0.897);
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: bounce 2s infinite; /* Bounce effect */
+}
+
+.start-game-btn:hover {
+  background-color: rgba(235, 199, 98, 0.644);
+}
+
+.start-game-btn:active {
+  transform: scale(0.98);
+}
+
+.start-game-btn:focus {
+  outline: none;
+}
+
+/* Keyframes for animations */
+
+/* Fade-in effect for the container */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('/public/images/hangman.jpg'); 
-    background-size: cover; /* Ensure it covers the entire container */
-    background-position: center; /* Center the image */
-    filter: blur(8px); /* Apply blur effect */
-    z-index: 1; /* Place it behind the text */
-    border-radius: 10px; /* Match border radius */
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .game-title {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: wheat;
-    position: relative; /* Ensure title is above the blurred background */
+}
+
+/* Pulsing shadow effect */
+@keyframes pulseShadow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(197, 134, 16, 0.4);
   }
-  
-  .start-game-btn {
-    background-color: rgba(235, 199, 98, 0.897);
-    color: white;
-    padding: 15px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative; /* Ensure button is above the blurred background */
+  50% {
+    box-shadow: 0 0 25px rgba(235, 199, 98, 0.8);
   }
-  
-  .start-game-btn:hover {
-    background-color: rgba(235, 199, 98, 0.644); /* Slightly darker on hover */
+}
+
+/* Slow pulsing effect for the whole container */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
   }
-  
-  .start-game-btn:active {
-    transform: scale(0.98);
+  50% {
+    transform: scale(1.02);
   }
-  
-  .start-game-btn:focus {
-    outline: none;
+}
+
+/* Slow zoom-in animation for the background */
+@keyframes zoomInBackground {
+  0% {
+    transform: scale(1);
   }
-  
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+/* Floating text effect for the title */
+@keyframes floatText {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Bounce effect for the button */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(-7px);
+  }
+}

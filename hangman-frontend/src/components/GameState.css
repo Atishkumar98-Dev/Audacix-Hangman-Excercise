@@ -6,7 +6,7 @@
     max-width: 100%;  /* Adjust width as needed */
     margin: 50px auto;  /* Centering the container */
     color: white;  /* Text color */
-    background-color: rgba(226, 179, 92, 0.61); /* Semi-transparent background for content visibility */
+    background-color: rgba(119, 79, 5, 0.61); /* Semi-transparent background for content visibility */
     z-index: 1;  /* Bring the content above the background */
   }
   
@@ -40,11 +40,11 @@
     background-color: #fff; /* Light background for input */
   }
   .button-hangman{
-    background-color: rgba(235, 199, 98, 0.897);
+    background-color: rgba(187, 139, 7, 0.966);
     color: #fff;
     padding: 1%;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
   }
 
 
