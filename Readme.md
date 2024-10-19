@@ -46,7 +46,7 @@ This is a full-stack web application that powers a Hangman game using a Django R
 
 ```bash
 git clone https://github.com/your-username/hangman-game.git
-cd hangman-game/backend
+cd hangman-game/config
 ```
 
 ### 2. Create a virtual environment
