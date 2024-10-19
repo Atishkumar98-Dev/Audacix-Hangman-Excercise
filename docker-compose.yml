@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  backend:
+    build:
+      context: .  # Adjust this if your backend is in the root folder
+    container_name: django-backend
+    volumes:
+      - .:/app  # Mount the entire current directory to the /app folder in the container
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=1
+    command: python manage.py runserver 0.0.0.0:8000
+
+  frontend:
+    build:
+      context: ./hangman-frontend/  # Adjust if your frontend is in a different folder
+    container_name: react-frontend
+    volumes:
+      - ./hangman-frontend:/app
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true
