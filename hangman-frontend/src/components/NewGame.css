@@ -1,0 +1,61 @@
+.new-game-container {
+    position: relative;  /* Allows positioning of pseudo-elements */
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 400px;   /* Width of the container */
+    margin: 50px auto;  /* Centering the container */
+    color: white;       /* Text color */
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background for visibility */
+    z-index: 2;        /* Ensure it's on top of the blurred background */
+  }
+  
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/public/images/hangman.jpg'); 
+    background-size: cover; /* Ensure it covers the entire container */
+    background-position: center; /* Center the image */
+    filter: blur(8px); /* Apply blur effect */
+    z-index: 1; /* Place it behind the text */
+    border-radius: 10px; /* Match border radius */
+  }
+  
+  .game-title {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: wheat;
+    position: relative; /* Ensure title is above the blurred background */
+  }
+  
+  .start-game-btn {
+    background-color: rgba(235, 199, 98, 0.897);
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative; /* Ensure button is above the blurred background */
+  }
+  
+  .start-game-btn:hover {
+    background-color: rgba(235, 199, 98, 0.644); /* Slightly darker on hover */
+  }
+  
+  .start-game-btn:active {
+    transform: scale(0.98);
+  }
+  
+  .start-game-btn:focus {
+    outline: none;
+  }
+  

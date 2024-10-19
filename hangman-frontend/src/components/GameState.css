@@ -1,0 +1,53 @@
+.game-state-container {
+    position: relative;  /* Allows positioning of pseudo-elements */
+    text-align: center;
+    padding: 14%;
+    border-radius: 10px;
+    max-width: 100%;  /* Adjust width as needed */
+    margin: 50px auto;  /* Centering the container */
+    color: white;  /* Text color */
+    background-color: rgba(226, 179, 92, 0.61); /* Semi-transparent background for content visibility */
+    z-index: 1;  /* Bring the content above the background */
+  }
+  
+  .word-display {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .word-box {
+    display: inline-block;
+    width: 30px;   /* Width of each character box */
+    height: 40px;  /* Height of each character box */
+    border: 1px solid white;
+    margin: 0 5px; /* Space between boxes */
+    text-align: center;
+    line-height: 40px; /* Center the character vertically */
+    font-size: 24px;
+    color: white; /* Color of the character */
+    background-color: rgba(235, 198, 98, 0.3); /* Slightly transparent background for boxes */
+  }
+  
+  .input-board {
+    margin: 20px ; /* Spacing around input */
+    padding: 1%;
+    
+    font-size: 18px;
+    border-radius: 5px;
+    z-index: 1;
+    border: 1px solid #ccc;
+    background-color: #fff; /* Light background for input */
+  }
+  .button-hangman{
+    background-color: rgba(235, 199, 98, 0.897);
+    color: #fff;
+    padding: 1%;
+    border: none;
+    border-radius: 10px;
+  }
+
+
+  .button-hangman:hover {
+    background-color: rgba(235, 199, 98, 0.644); /* Slightly darker on hover */
+  }
