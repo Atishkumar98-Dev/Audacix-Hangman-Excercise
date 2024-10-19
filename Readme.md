@@ -154,8 +154,8 @@ The frontend will be accessible at `http://localhost:3000/`.
 
 Here are the primary API endpoints for the Hangman game:
 
-- **POST /api/game/start/**: Start a new game and get a random word to guess.
-- **POST /api/game/guess/**: Make a guess and receive feedback on the current game state.
+- **POST /game/start/**: Start a new game and get a random word to guess.
+- **POST /game/guess/**: Make a guess and receive feedback on the current game state.
 
 ---
 
