@@ -45,8 +45,8 @@ This is a full-stack web application that powers a Hangman game using a Django R
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/hangman-game.git
-cd hangman-game/config
+git clone https://github.com/Atishkumar98-Dev/Audacix-Hangman-Excercise
+cd Audacix-Hangman-Excercise/
 ```
 
 ### 2. Create a virtual environment
