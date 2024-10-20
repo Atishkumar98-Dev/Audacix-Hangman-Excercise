@@ -1,7 +1,11 @@
 .game-state-container {
     position: relative;  /* Allows positioning of pseudo-elements */
     text-align: center;
-    padding: 14%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 10%;
     border-radius: 10px;
     max-width: 100%;  /* Adjust width as needed */
     margin: 50px auto;  /* Centering the container */
@@ -18,12 +22,12 @@
   
   .word-box {
     display: inline-block;
-    width: 30px;   /* Width of each character box */
-    height: 40px;  /* Height of each character box */
+    width: 70px;   /* Width of each character box */
+    height: 90px;  /* Height of each character box */
     border: 1px solid white;
     margin: 0 5px; /* Space between boxes */
     text-align: center;
-    line-height: 40px; /* Center the character vertically */
+    line-height: 90px; /* Center the character vertically */
     font-size: 24px;
     color: white; /* Color of the character */
     background-color: rgba(235, 198, 98, 0.3); /* Slightly transparent background for boxes */
@@ -43,6 +47,9 @@
     background-color: rgba(187, 139, 7, 0.966);
     color: #fff;
     padding: 1%;
+    padding-right: 5%;
+    padding-left: 5%;
+    margin: 1%;
     border: none;
     border-radius: 5px;
   }
